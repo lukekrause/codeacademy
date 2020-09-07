@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://127.0.0.1:5500/rock,%20paper,%20scissors/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA Compatible" content="ie=edge">
+    
+    <title>Rock, Paper, Scissors</title>
+<link rel="stylesheet" href="./Rock, Paper, Scissors_files/style.css"></head>
+<body>
+    
+    <section class="game">
+        <div class="score">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+        <div class="computer-score">
+            <h2>Computer</h2>
+            <p>0</p>
+        </div>
+    </div>
+
+    <div class="intro fadeOut">
+        <h1>Rock, Paper, Scissors</h1>
+        <button>LET'S PLAY</button>
+    </div>    
+
+    <div class="match fadeOut">
+        <h2 class="winner"> Choose an option</h2>
+        <div class="hands">
+            <img class="player-hand" src="./Rock, Paper, Scissors_files/fist.jpeg" alt="">
+            <img class="computer-hand" src="./Rock, Paper, Scissors_files/robotfist.jpeg" alt="">
+        </div>
+    <div class="options">
+        <button class="rock">rock</button>
+        <button class="paper">paper</button>
+        <button class="scissors">scissors</button>
+    </div>
+    </div>
+    </section>
+    <script src="./Rock, Paper, Scissors_files/app.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
