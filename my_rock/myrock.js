@@ -49,6 +49,7 @@ const computerChoice = choices[randomNumber()]
 
 // function checksWinner(playerInput, computerInput){}
 
+
 function checksWinner(playerInput, computerInput) {
   if (playerInput === 'rock' && computerInput === 'paper') {
     return 'You Got Covered!!' 
