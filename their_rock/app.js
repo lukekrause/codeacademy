@@ -14,58 +14,64 @@ const choices = ['rock', 'paper', 'scissors']
 
 const computerChoice = choices[randomNumber()]
 
-
-
 function randomNumber() {
 return Math.floor(Math.random() * Math.floor(choices.length))}
 
-
 function ourFunction(input){
-  readlinePackage.question(message, (input) => {
+    readlinePackage.question(message, (input) => {
     let playerChoice = choices[input]
-    if (input > 2){
-    checkRange(input) 
+        if (input > 2){checkRange(input) 
     } else {
-    console.log(checksWinner(playerChoice, computerChoice))
-    }
-});
+      console.log(checksWinner(playerChoice, computerChoice))
+      ourFunction()
+      }
+    });
 
-
-function checkRange(x){
-    if(x > 2 || x < 0){
-    console.log("Value out of range!! Try again")
+  function checkRange(x){
+    if(x > 2 || x < 0 || x === ""){
+      console.log("Value out of range!! Try again")
       ourFunction()
     }  
   } 
 
+  function checksWinner(playerInput, computerInput) {
 
-function checksWinner(playerInput, computerInput) {
     if (playerInput === 'rock' && computerInput === 'paper') {
-    return 'Player = Rock. \nComputer = Paper. \nYou Got Covered!!' 
+    return "Player = Rock. \nComputer = Paper. \nYou Got Covered!!"
+
     } if (playerInput === 'rock' && computerInput === 'scissors') {
-    return 'Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!'
+    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!"
+
+    } if (playerInput === 'rock' && computerInput === 'rock') {
+    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!"
+
     } if (playerInput === 'paper' && computerInput === 'rock') {
-    return 'Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!'
+    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!"
+
     } if (playerInput === 'paper' && computerInput === 'scissors') {
-    return 'Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!'
+    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!"
+
+    } if (playerInput === 'paper' && computerInput === 'paper') {
+    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!"
+
     } if (playerInput === 'scissors' && computerInput === 'rock') {
-    return 'Player = Scissors. \nComputer = Rock. \nYou Lost to Dwayne Johnson!'
+    return "Player = Scissors. \nComputer = Rock. \nYou got banged!" 
+
     } if (playerInput === 'scissors' && computerInput === 'paper') {
-    return 'Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!'
+    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!"
+
+    } if (playerInput === 'scissors' && computerInput === 'scissors') {
+    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie"
+
     } if (playerInput === computerInput) {
-    return 'Same result!! Try Again, Jonathan Againigains!' 
+    return "Same result!! Try Again, Jonathan Againigains!"
+
     } else {
-      return 'Err'
-    }
+    return "Error! Try Again!" }
+  } 
 }
-    
-  
-    
-}
-  
 
-  ourFunction()
-
+ourFunction()
 
 // // const random = random.Math();
 
