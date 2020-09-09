@@ -29,7 +29,7 @@ function eightBallAnswer(num) {
   } if (num === 7) {
       console.log('Signs point to yes')
   } if (num > 7) {
-    console.log('Cannot predict now')
+      console.log('Cannot predict now')
   }
 }
 
