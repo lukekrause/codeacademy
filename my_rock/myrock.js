@@ -50,6 +50,7 @@ const computerChoice = choices[randomNumber()]
 // function checksWinner(playerInput, computerInput){}
 
 
+
 function checksWinner(playerInput, computerInput) {
   if (playerInput === 'rock' && computerInput === 'paper') {
     return 'You Got Covered!!' 
@@ -64,7 +65,7 @@ function checksWinner(playerInput, computerInput) {
     return 'You Got Cut Up!'
   } 
   if (playerInput === 'scissors' && computerInput === 'rock') {
-    return 'You Lost to Dwayne Johnson!'
+    return 'Dwayne Johnson Just Stuffed You In His Fanny Pack!'
   } 
     if (playerInput === 'scissors' && computerInput === 'paper') {
     return 'You Win, Edward Scissor Hands!'
