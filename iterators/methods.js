@@ -1,3 +1,5 @@
+const { SourceMap } = require("module");
+
 const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
 
 const nums = [1, 50, 75, 200, 350, 525, 1000];
@@ -21,3 +23,5 @@ const smallerNums = nums.map(num => num - 5);
 // Choose a method that will return a boolean value
 nums.every(num => num < 0);
 // OR nums.some(num => num < 0);
+
+const 
