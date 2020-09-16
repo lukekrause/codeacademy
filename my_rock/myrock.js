@@ -1,83 +1,97 @@
-// //ROCK PAPER SCISSORS
+// // //ROCK PAPER SCISSORS
 
 const readline = require('readline');
 
 const readlinePackage = readline.createInterface({
   input: process.stdin,
   output: process.stdout
+
 });
 
 const message = 'Type 0 for Rock. 1 for Paper. 2 for Scissors?'
 
 const choices = ['rock', 'paper', 'scissors']
 
+const computerChoice = choices[randomNumber()]
 
-// //Call the readline package take 2 arguments 1. string 2. function
+function randomNumber() {
+return Math.floor(Math.random() * Math.floor(choices.length))}
+
+function ourFunction(input){
+    readlinePackage.question(message, (input) => {
+    let playerChoice = choices[input]
+        if (input > 2){checkRange(input) 
+    } else {
+      console.log(checksWinner(playerChoice, computerChoice))
+      ourFunction()
+      }
+    });
+
+  function checkRange(x){
+    if(x > 2 || x < 0 || x === ""){
+      console.log("Value out of range!! Try again\n")
+      ourFunction()
+    }  
+  } 
+
+  function checksWinner(playerInput, computerInput) {
+
+    if (playerInput === 'rock' && computerInput === 'paper') {
+    return "Player = Rock. \nComputer = Paper. \nYou Got Covered!!\n"
+
+    } if (playerInput === 'rock' && computerInput === 'scissors') {
+    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!\n"
+
+    } if (playerInput === 'rock' && computerInput === 'rock') {
+    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!\n"
+
+    } if (playerInput === 'paper' && computerInput === 'rock') {
+    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!\n"
+
+    } if (playerInput === 'paper' && computerInput === 'scissors') {
+    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!\n"
+
+    } if (playerInput === 'paper' && computerInput === 'paper') {
+    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!\n"
+
+    } if (playerInput === 'scissors' && computerInput === 'rock') {
+    return "Player = Scissors. \nComputer = Rock. \nYou got banged!\n" 
+
+    } if (playerInput === 'scissors' && computerInput === 'paper') {
+    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!\n"
+
+    } if (playerInput === 'scissors' && computerInput === 'scissors') {
+    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie\n"
+
+    } if (playerInput === computerInput) {
+    return "Same result!! Try Again, Jonathan Againigains!\n"
+
+    } else {
+    return "Error! Try Again!\n" }
+  } 
+}
+
+// const playAgainQuest = ("Play Again? Y/N?" + playAgain())
+
+// console.log("Play Again? Y/N?" + playAgain('y'))
+
+// function playAgain(xPlayAgain) {
+//     if (xPlayAgain === 'y') {
+//     console.log('y')
+//     } if (xPlayAgain === 'n') {
+//     return "Thanks for Playing!"
+// } }
 
 
-  function ourFunction(){
-  readlinePackage.question(message, (playerInput) => {
-    if (playerInput > 2){
-    checkRange(playerInput)
-    }
-
-
-  readlinePackage.close()
-})
-  }
 
 ourFunction()
 
-
-function checkRange(x){
-  if(x > 2 || x < 0){
-  console.log("Value out of range!! Try again idiot")
-      ourFunction()
-  }
-}
-
-
-  //let computerchoice = choices[randomNumber]
-  // returns computerChoice
-  
-  // Random number gernerator
-function randomNumber() {
-  return Math.floor(Math.random() * Math.floor(choices.length))
-}
-
-const computerChoice = choices[randomNumber()]
-
-// function checksWinner(playerInput, computerInput){}
-
-
-
-function checksWinner(playerInput, computerInput) {
-  if (playerInput === 'rock' && computerInput === 'paper') {
-    return 'You Got Covered!!' 
-    }
-  if (playerInput === 'rock' && computerInput === 'scissors') {
-    return 'You Rock Bottomed His Ass!'
-  } 
-  if (playerInput === 'paper' && computerInput === 'rock') {
-    return 'You Covered Him for the 1, 2, 3!'
-  } 
-  if (playerInput === 'paper' && computerInput === 'scissors') {
-    return 'You Got Cut Up!'
-  } 
-  if (playerInput === 'scissors' && computerInput === 'rock') {
-    return 'Dwayne Johnson Just Stuffed You In His Fanny Pack!'
-  } 
-    if (playerInput === 'scissors' && computerInput === 'paper') {
-    return 'You Win, Edward Scissor Hands!'
-  } else {
-    return 'Cats Game'
-  }
-}
-
-
-
-
-// looping through an array
-// for (let index = 0; index < choices.length; index ++){
-//    console.log(choices[index])
+// do {
+//   ourFunction()
 // }
+// while (myNewFunction(true))
+
+// // looping through an array
+// // for (let index = 0; index < choices.length; index ++){
+// //    console.log(choices[index])
+// // }
