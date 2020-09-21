@@ -1,12 +1,12 @@
 // // //ROCK PAPER SCISSORS
 
-const readline = require('readline');
+// const readline = require('readline');
 
-const readlinePackage = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+// const readlinePackage = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
 
-});
+// });
 
 const message = 'Type 0 for Rock. 1 for Paper. 2 for Scissors?'
 
@@ -14,18 +14,27 @@ const choices = ['rock', 'paper', 'scissors']
 
 const computerChoice = choices[randomNumber()]
 
+const playerClickRock = document.querySelector('.rock') 
+playerClickRock.addEventListener('click', myRock)
+
+function myRock() {return checksWinner('rock', computerChoice) }
+function myPaper() {return checksWinner('paper', computerChoice) }
+function myScissors() {return checksWinner('scissors', computerChoice) }
+
+
+
 function randomNumber() {
 return Math.floor(Math.random() * Math.floor(choices.length))}
 
-function ourFunction(input){
-    readlinePackage.question(message, (input) => {
-    let playerChoice = choices[input]
-        if (input > 2){checkRange(input) 
-    } else {
-      console.log(checksWinner(playerChoice, computerChoice))
-      ourFunction()
-      }
-    });
+// function ourFunction(input){
+//     readlinePackage.question(message, (input) => {
+//     let playerChoice = choices[input]
+//         if (input > 2){checkRange(input) 
+//     } else {
+//       console.log(checksWinner(playerChoice, computerChoice))
+//       ourFunction()
+//       }
+//     });
 
   function checkRange(x){
     if(x > 2 || x < 0 || x === ""){
@@ -40,36 +49,47 @@ function ourFunction(input){
     return "Player = Rock. \nComputer = Paper. \nYou Got Covered!!\n"
 
     } if (playerInput === 'rock' && computerInput === 'scissors') {
-    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!\n"
+    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!\n",
+    console.log('Test')
 
     } if (playerInput === 'rock' && computerInput === 'rock') {
-    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!\n"
+    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!\n",
+    console.log('Test')
 
     } if (playerInput === 'paper' && computerInput === 'rock') {
-    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!\n"
+    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!\n",
+    console.log('Test')
 
     } if (playerInput === 'paper' && computerInput === 'scissors') {
-    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!\n"
+    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!\n",
+    console.log('Test')
 
     } if (playerInput === 'paper' && computerInput === 'paper') {
-    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!\n"
+    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!\n",
+    console.log('Test')
 
     } if (playerInput === 'scissors' && computerInput === 'rock') {
-    return "Player = Scissors. \nComputer = Rock. \nYou got banged!\n" 
+    return "Player = Scissors. \nComputer = Rock. \nYou got banged!\n",
+    console.log('Test')
 
     } if (playerInput === 'scissors' && computerInput === 'paper') {
-    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!\n"
+    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!\n",
+    console.log('Test')
 
     } if (playerInput === 'scissors' && computerInput === 'scissors') {
-    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie\n"
+    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie\n",
+    console.log('Test')
 
     } if (playerInput === computerInput) {
-    return "Same result!! Try Again, Jonathan Againigains!\n"
+    return "Same result!! Try Again, Jonathan Againigains!\n",
+    console.log('Test')
+    
 
     } else {
-    return "Error! Try Again!\n" }
-  } 
-}
+    return "Error! Try Again!\n",
+    console.log('Test')}
+  }
+// }
 
 // const playAgainQuest = ("Play Again? Y/N?" + playAgain())
 
@@ -84,7 +104,9 @@ function ourFunction(input){
 
 
 
-ourFunction()
+
+
+// ourFunction()
 
 // do {
 //   ourFunction()
