@@ -7,13 +7,13 @@ html {
     height: 100%;
   }
   
-  body {
+body {
     margin: 0;
     min-height: 100%;
     background-color: wheat;
   }
   
-  header {
+header {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -31,6 +31,17 @@ html {
 
   }
   
-  
+
+  .buttons {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+
+}
+
+click-buttons {
+    color: red;
+}
   
   

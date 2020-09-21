@@ -14,12 +14,18 @@ const choices = ['rock', 'paper', 'scissors']
 
 const computerChoice = choices[randomNumber()]
 
-const playerClickRock = document.querySelector('.rock') 
-playerClickRock.addEventListener('click', myRock)
+const myRock = checksWinner('rock', computerChoice) 
+const myPaper = checksWinner('paper,', computerChoice)
+const myScissor = checksWinner('rock', computerChoice) 
+const printHello = () => {
+  return console.log('Hello')
+}
 
-function myRock() {return checksWinner('rock', computerChoice) }
-function myPaper() {return checksWinner('paper', computerChoice) }
-function myScissors() {return checksWinner('scissors', computerChoice) }
+// document.querySelector(choice).addEventListener('MOUSEEVENT', playerChoice(choice))
+
+
+
+document.querySelector('click-buttons').addEventListener('click', printHello)
 
 
 
@@ -49,45 +55,45 @@ return Math.floor(Math.random() * Math.floor(choices.length))}
     return "Player = Rock. \nComputer = Paper. \nYou Got Covered!!\n"
 
     } if (playerInput === 'rock' && computerInput === 'scissors') {
-    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!\n",
-    console.log('Test')
+    return "Player = Rock. \nComputer = Scissors. \nYou Rock Bottomed His Ass!\n"
+
 
     } if (playerInput === 'rock' && computerInput === 'rock') {
-    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!\n",
-    console.log('Test')
+    return "Player = Rock. \nComputer = Rock. \nCats Game. Try Again!\n"
+    
 
     } if (playerInput === 'paper' && computerInput === 'rock') {
-    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!\n",
-    console.log('Test')
+    return "Player = Paper. \nComputer = Rock. \nYou Covered Him for the 1, 2, 3!\n"
+    
 
     } if (playerInput === 'paper' && computerInput === 'scissors') {
-    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!\n",
-    console.log('Test')
+    return "Player = Paper. \nComputer = Scissors. \nYou Got Cut Up!\n"
+    
 
     } if (playerInput === 'paper' && computerInput === 'paper') {
-    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!\n",
-    console.log('Test')
+    return "Player = Paper. \nComputer = Paper. \nPaper...paper...boring!\n"
+    
 
     } if (playerInput === 'scissors' && computerInput === 'rock') {
-    return "Player = Scissors. \nComputer = Rock. \nYou got banged!\n",
-    console.log('Test')
+    return "Player = Scissors. \nComputer = Rock. \nYou got banged!\n"
+    
 
     } if (playerInput === 'scissors' && computerInput === 'paper') {
-    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!\n",
-    console.log('Test')
+    return "Player = Scissors. \nComputer = Paper. \nYou Win, Edward Scissor Hands!\n"
+    
 
     } if (playerInput === 'scissors' && computerInput === 'scissors') {
-    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie\n",
-    console.log('Test')
+    return "Player = Scissors. \nComputer = Scissors. \nScissor me timbers, it\'s a tie\n"
+    
 
     } if (playerInput === computerInput) {
-    return "Same result!! Try Again, Jonathan Againigains!\n",
-    console.log('Test')
+    return "Same result!! Try Again, Jonathan Againigains!\n"
+    
     
 
     } else {
-    return "Error! Try Again!\n",
-    console.log('Test')}
+    return "Error! Try Again!\n"
+    }
   }
 // }
 

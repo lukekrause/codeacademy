@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rock, Paper, Scissors</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- <link rel="shortcut icon" href="/favicon.ico" /> -->
     <link rel="stylesheet" href="style.css" />
   <header>
 
-
-
+<div class="game">
     <body>
         <section class="game">
             <div class="intro">
@@ -19,12 +18,21 @@
             </div>
         </section>
     </header>
-    
+</div>
+
         <p> Pick. Your. Weapon. <br>
 
-    <button type="button" onclick="myRock()">Rock</button>
-    <button type="button" onclick="myPaper()">Paper</button>
-    <button type="button" onclick="myScissors()">Scissors</button>
+<div class="buttons">
+    <button class="click-buttons"></button>
+    <!-- <button class="click-buttons"></button> -->
+    <!-- <button class="click-buttons"></button> -->
+    
+</div>
+
+<div id="RockDiv">
+    <p>You chose Rock</p>
+</div>
+
         </p>
         
         <script src="myrock.js"></script>
