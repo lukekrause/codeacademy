@@ -8,7 +8,7 @@
 
 // });
 
-const message = 'Type 0 for Rock. 1 for Paper. 2 for Scissors?'
+// const message = 'Type 0 for Rock. 1 for Paper. 2 for Scissors?'
 
 const choices = ['rock', 'paper', 'scissors']
 
@@ -16,19 +16,35 @@ const computerChoice = choices[randomNumber()]
 
 const myRock = checksWinner('rock', computerChoice) 
 const myPaper = checksWinner('paper,', computerChoice)
-const myScissor = checksWinner('rock', computerChoice) 
-const printHello = () => {
-  return console.log('Hello')
+const myScissor = checksWinner('scissors', computerChoice) 
+
+// Button Selectionß
+
+const rockBtn = document.getElementById('rockbutton')
+const paperBtn = document.getElementById('paperbutton')
+const scissorBtn = document.getElementById('scissorbutton')
+
+
+rockBtn.onclick = function() {
+  document.getElementById("rock-winner").innerHTML = "Rock Wins!";
 }
+
+paperBtn.onclick = function() {
+  document.getElementById("paper-winner").innerHTML = "Paper Wins!";
+}
+
+scissorBtn.onclick = function() {
+  document.getElementById("scissor-winner").innerHTML = "Scissor Wins!";
+}
+
+
+
+
 
 // document.querySelector(choice).addEventListener('MOUSEEVENT', playerChoice(choice))
 
 
-
-document.querySelector('click-buttons').addEventListener('click', printHello)
-
-
-
+// Get random Number
 function randomNumber() {
 return Math.floor(Math.random() * Math.floor(choices.length))}
 
